@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	ConnectMode : ACTIVE || PASV
+	TransferType : ASCII || BINARY
+-->
+<ftps>
+	<ftp>
+		<id>host249</id>
+		<host>192.169.100.249</host>
+		<user>tianya</user>
+		<password>123456</password>
+		<connect_mode>PASV</connect_mode>
+		<transfer_type>BINARY</transfer_type>
+		<timeout>600000</timeout>
+	</ftp>	
+	<ftp>
+		<id>smaple</id>
+		<host>smaple</host>
+		<user>smaple</user>
+		<password>smaple</password>
+		<connect_mode>smaple</connect_mode>
+		<transfer_type>smaple</transfer_type>
+		<timeout>600000</timeout>
+	</ftp>	
+</ftps>

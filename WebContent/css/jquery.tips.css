@@ -1,0 +1,26 @@
+/* 提示框的总体显示样式 */
+    .tool-tip {
+    	color: #000000;
+    	z-index: 13000;
+    	border-bottom: 2px solid #eee;
+    	border-right: 2px solid #eee;
+    }
+    /* 提示框标题的显示样式 */ 
+    .tool-title {
+    	font-weight: bold;
+    	font-size: 11px;
+    	margin: 0;
+    	color: #9FD4FF;
+    	padding: 8px 8px 4px;
+    	border: 1px solid #8CB9DA;
+    	background-color: white;
+    }
+    /* 提示框正文的显示样式 */      
+    .tool-text {
+    	background-color: white;
+    	text-align: left;
+    	white-space: nowrap;
+    	padding: 5px;
+    	border: 1px solid #8CB9DA;
+    	line-height: 20px;
+    }

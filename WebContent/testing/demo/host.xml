@@ -1,0 +1,25 @@
+<result>
+	<currentpage>1</currentpage>
+    <totalpages>999</totalpages>
+    <totalrecords>10</totalrecords>
+    <rows>
+    		<row id="0"> 
+    				<cell><![CDATA[s0000]]></cell>
+    				<cell><![CDATA[设备资产号 ty0001]]></cell>
+    				<cell><![CDATA[192.169.100.250]]></cell>
+    				<cell><![CDATA[2]]></cell>
+    				<cell><![CDATA[pc]]></cell>
+    				<cell><![CDATA[3]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="1"> 
+    				<cell><![CDATA[s0001]]></cell>
+    				<cell><![CDATA[设备资产号 ty0002]]></cell>
+    				<cell><![CDATA[192.169.100.249]]></cell>
+    				<cell><![CDATA[2]]></cell>
+    				<cell><![CDATA[mini_frame]]></cell>
+    				<cell><![CDATA[3]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row> 
+    </rows>
+</result>

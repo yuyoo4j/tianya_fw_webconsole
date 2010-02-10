@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd" 
+       default-lazy-init="false" default-autowire="byName">
+
+	<util:map id="freemarker.ftl.collection">
+		<entry key="ftl.sql.app.list">
+			<value type="java.lang.String"><![CDATA[
+			   select app_pk, parents_pk, app_name, app_state, create_time, remark
+				from fw_app
+				where app_pk <> '' 
+				<#if _search = "true">
+				   <#if searchField = "app_pk">
+				   	and app_pk = '${searchString}'
+				   </#if>
+				   <#if searchField = "parents_pk">
+				   	and parents_pk = '${searchString}'
+				   </#if> 
+				</#if>
+				<#if sidx != "id">
+				order by ${sidx} ${sord}
+				</#if>
+				limit ${(page?number - 1) * rows?number}, ${rows?number}
+			]]></value>
+		</entry> 
+		<entry key="ftl.sql.app.query_parent_list">
+			<value type="java.lang.String"><![CDATA[
+			   select app_pk,app_name,parents_pk
+			   from fw_app
+			   where parents_pk='0'
+			   order by app_pk
+			]]></value>
+		</entry> 
+		<entry key="ftl.sql.app.edit_item">
+			<value type="java.lang.String"><![CDATA[
+			   update fw_app
+			   set app_name='${app_name}',
+			       app_state=${app_state},
+			       remark='${remark}'
+			    where app_pk='${app_pk}'
+			]]></value>
+		</entry> 
+		<entry key="ftl.sql.app.add_item">
+			<value type="java.lang.String"><![CDATA[
+			   insert into fw_app(app_pk, parents_pk, app_name, app_state, create_time, remark)
+			   values('${app_pk}', '${parents_pk}', '${app_name}', ${app_state}, '${create_time}', '${remark}')
+			]]></value>
+		</entry> 
+		<entry key="ftl.sql.user.list">
+			<value type="java.lang.String"><![CDATA[
+			    select user_id, user_label, user_name, password, user_state, create_time, creator, memo
+				from sec_user
+				where 1=1
+				<#if _search = "true">
+				   <#if searchField = "user_id">
+				   	and user_id = '${searchString}'
+				   </#if>
+				   <#if searchField = "user_label">
+				   	and user_label = '${searchString}'
+				   </#if> 
+				</#if>
+				<#if sidx != "id">
+				order by ${sidx} ${sord}
+				</#if>
+				limit ${(page?number - 1) * rows?number}, ${rows?number}
+			]]></value>
+		</entry> 
+		<entry key="ftl.sql.user.add_item">
+			<value type="java.lang.String"><![CDATA[
+			   insert into sec_user(user_id, user_label, user_name, password, user_state, create_time, creator, memo)
+			   values('${app_pk}', '${parents_pk}', '${app_name}', ${app_state}, '${create_time}', '${remark}')
+			]]></value>
+		</entry> 
+	</util:map> 	
+</beans>

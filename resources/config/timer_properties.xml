@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timers>
+	<!-- 多个定时器 -->
+
+	<!-- 配置样例配置属性因schedule_sort值的不同而不同，当schedule_sort=0,2 属性为delay,当schedule_sort=１,３属性为time,当当schedule_sort=４,５则没有属性period-->
+	<!--timer>
+		<schedule_sort>0</schedule_sort>
+		<delay>0</delay>
+		<period>1000</period>
+		<timertask>cn.tianya.fw.timer.TestTimerTaskEntrance</timertask>
+	</timer>	
+	<timer>
+		<schedule_sort>1</schedule_sort>
+		<time>2009-04-22 15:55:00</time>
+		<period>1000</period>
+		<timertask>cn.tianya.fw.timer.TestTimerTaskEntrance</timertask>
+	</timer>	
+	<timer>
+		<schedule_sort>2</schedule_sort>
+		<delay>0</delay>
+		<period>1000</period>
+		<timertask>cn.tianya.fw.timer.TestTimerTaskEntrance</timertask>
+	</timer>	
+	<timer>
+		<schedule_sort>3</schedule_sort>
+		<time>2009-04-22 15:55:00</time>
+		<period>1000</period>
+		<timertask>cn.tianya.fw.timer.TestTimerTaskEntrance</timertask>
+	</timer>	
+	<timer>
+		<schedule_sort>4</schedule_sort>
+		<delay>0</delay>
+		<timertask>cn.tianya.fw.timer.TestTimerTaskEntrance</timertask>
+	</timer>	
+	<timer>
+		<schedule_sort>5</schedule_sort>
+		<time>2009-04-22 15:55:00</time>
+		<timertask>cn.tianya.fw.timer.TestTimerTaskEntrance</timertask>
+	</timer-->	
+	
+    <!--定时器执行的方法 
+     0：schedule(TimerTask task, long delay, long period) 
+     1：schedule(TimerTask task, Date time, long period) 
+     2：scheduleAtFixedRate(TimerTask task, long delay, long period) 
+     3：scheduleAtFixedRate(TimerTask task, Date time, long period) 
+     4: schedule (TimerTask task, long delay)                                
+     5: schedule (TimerTask task,Date time)
+    -->			
+	<timer>
+		<schedule_sort>0</schedule_sort>
+		<delay>0</delay>
+		<!--  单位：毫秒-->
+		<period>3600000</period>
+		<!-- 执行的任务类该类或者继承TimerTask-->
+		<timertask>cn.tianya.admin.monitor.task.MonitorStatTimerTask</timertask>
+	</timer>				
+</timers>
+

@@ -1,0 +1,127 @@
+<result>
+	<currentpage>1</currentpage>
+    <totalpages>999</totalpages>
+    <totalrecords>10</totalrecords>
+    <rows>
+    		<row id="0"> 
+    				<cell><![CDATA[group]]></cell>
+    				<cell><![CDATA[天涯部落]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[]]></cell>
+    				<cell><![CDATA[]]></cell>
+    				<cell><![CDATA[]]></cell>
+    				<cell><![CDATA[rsc_group]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="1"> 
+    				<cell><![CDATA[group_admin]]></cell>
+    				<cell><![CDATA[部落官方后台]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[group]]></cell>
+    				<cell><![CDATA[天涯部落]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_group]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="2"> 
+    				<cell><![CDATA[group_blgf]]></cell>
+    				<cell><![CDATA[部落官方]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[group]]></cell>
+    				<cell><![CDATA[天涯部落]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_group]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="3"> 
+    				<cell><![CDATA[group_component]]></cell>
+    				<cell><![CDATA[部落接口组件]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[group]]></cell>
+    				<cell><![CDATA[天涯部落]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_group_component]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="4"> 
+    				<cell><![CDATA[group_front]]></cell>
+    				<cell><![CDATA[部落前台]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[group]]></cell>
+    				<cell><![CDATA[天涯部落]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_group_front]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="5"> 
+    				<cell><![CDATA[group_manage]]></cell>
+    				<cell><![CDATA[部落用户管理后台]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[group]]></cell>
+    				<cell><![CDATA[天涯部落]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_group]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="6"> 
+    				<cell><![CDATA[BBS]]></cell>
+    				<cell><![CDATA[论坛主副版]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[]]></cell>
+    				<cell><![CDATA[]]></cell>
+    				<cell><![CDATA[]]></cell>
+    				<cell><![CDATA[rsc_BBS]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="7"> 
+    				<cell><![CDATA[BBS_100]]></cell>
+    				<cell><![CDATA[天涯医院]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[BBS]]></cell>
+    				<cell><![CDATA[论坛主副版]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_BBS]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="7"> 
+    				<cell><![CDATA[BBS_102]]></cell>
+    				<cell><![CDATA[没话找话]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[BBS]]></cell>
+    				<cell><![CDATA[论坛主副版]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_BBS]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="7"> 
+    				<cell><![CDATA[BBS_103]]></cell>
+    				<cell><![CDATA[收藏天地]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[BBS]]></cell>
+    				<cell><![CDATA[论坛主副版]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_BBS]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="7"> 
+    				<cell><![CDATA[BBS_104]]></cell>
+    				<cell><![CDATA[QQ驿站]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[BBS]]></cell>
+    				<cell><![CDATA[论坛主副版]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_BBS]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    		<row id="7"> 
+    				<cell><![CDATA[BBS_105]]></cell>
+    				<cell><![CDATA[生肖血型]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[BBS]]></cell>
+    				<cell><![CDATA[论坛主副版]]></cell>
+    				<cell><![CDATA[appID]]></cell>
+    				<cell><![CDATA[rsc_BBS_105]]></cell>
+    				<cell><![CDATA[演示数据]]></cell>
+    		</row>
+    </rows>
+</result>

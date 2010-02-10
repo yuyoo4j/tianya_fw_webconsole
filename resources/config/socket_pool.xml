@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--socket连接池配置，一个应用只要创建一个池就可以了-->
+<pools>
+	<max_active>512</max_active>
+	<idle_timeout_sec>30</idle_timeout_sec>
+	<max_active_per_app>30</max_active_per_app>
+	<min_active_per_app>5</min_active_per_app>
+	<creation_max_wait_sec>3</creation_max_wait_sec>
+</pools>

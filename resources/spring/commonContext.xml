@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd" 
+       default-lazy-init="false" default-autowire="byName">
+	
+	<bean id="sucerity.manager" class="cn.tianya.fw.webconsole.secutiry.SecurityManager"></bean>
+	<bean id="module.config.app" class="cn.tianya.fw.webconsole.module.config.action.AppAction"></bean>
+	<bean id="module.config.bizEntity" class="cn.tianya.fw.webconsole.module.config.action.BizEntityAction"></bean>
+	<bean id="module.config.resource" class="cn.tianya.fw.webconsole.module.config.action.ResourceAction"></bean>
+	<bean id="module.system.security" class="cn.tianya.fw.webconsole.module.system.action.SecurityAction"></bean>
+	<bean id="lab.testing.Test" class="cn.tianya.lab.testing.Test"></bean>
+</beans>

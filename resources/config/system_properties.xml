@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties>
+    <!-- /////////////开始应用相关配置////////////////// -->
+    <!-- ***********应用主键配置********* -->
+    <!-- 核心配置应用 -->
+    <app_id_conf_db>conf_db</app_id_conf_db>
+    <app_id_conf_socket>conf_socket</app_id_conf_socket>
+    <app_id_conf_cache>conf_cache</app_id_conf_cache>
+    <app_id_conf_component>conf_component</app_id_conf_component>   
+    <app_id_conf_dfs>conf_dfs</app_id_conf_dfs>   
+    <app_id_dfs_map>dfs_map</app_id_dfs_map>   
+    <!-- 定时器相关配置 -->
+    <!--timer_file>/config/timer_properties.xml</timer_file-->          
+    <!-- /////////////结束应用相关配置////////////////// -->
+
+    <!-- /////////////开始客户端初始化相关配置////////////////// --> 
+    
+    <!-- ***********系统根节点配置***********-->     
+    <!--root_config_source>root_component_proxy_source</root_config_source-->
+    <root_cache_url>192.169.100.249:11211</root_cache_url>
+    
+    <!-- ***********系统配置相关配置文件***********-->
+    <!-- 用CLASSPATH资源路径指定，非文件系统绝对路径 -->
+    <sys_file_log>/config/log4j.properties</sys_file_log>
+    <sys_file_socket_pool>/config/socket_pool.xml</sys_file_socket_pool>
+    <sys_file_ftp_util>/config/ftp_config.xml</sys_file_ftp_util>    
+	<!-- ***********组件服务相关配置***********-->
+	<component_file_client>/config/component_client.properties</component_file_client>
+    <!-- /////////////结束客户端初始化相关配置////////////////// --> 
+</properties>
