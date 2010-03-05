@@ -1,21 +1,14 @@
 package cn.tianya.lab.testing;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cn.tianya.fw.exception.DAOException;
-import cn.tianya.fw.service.AppClient;
-import cn.tianya.fw.service.RequestPacker;
-import cn.tianya.fw.service.RowSetXml;
-import cn.tianya.fw.util.StringUtil;
 import cn.tianya.fw.webconsole.data.FreemarkerFactory;
 import cn.tianya.fw.webconsole.data.JqGridJsonResponse;
 import cn.tianya.fw.webconsole.mvc.RequestContext;
@@ -82,6 +75,7 @@ public class Test {
 		rc.getWriter().println(content);
 	}
 	
+	/*
 	@SuppressWarnings("unchecked")
 	public void testTianyafw() { 
 		
@@ -144,6 +138,7 @@ public class Test {
 		log.debug("queryStr:{}", rc.getRequest().getQueryString());
 		log.debug("params:{}", params);
 	}
+	*/
 	 	
 	public void testAppDb() {
 

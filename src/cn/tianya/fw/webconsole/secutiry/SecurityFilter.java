@@ -17,8 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet Filter implementation class SecurityFilter
  */
 public class SecurityFilter implements Filter {
-
-	
+ 	
 	private boolean sucerityFilter = true;
 	
 	private String failureRedirect = "/login.html";
@@ -38,12 +37,9 @@ public class SecurityFilter implements Filter {
 	 * @see Filter#init(FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		
-		contextPath = "/" + fConfig.getServletContext().getServletContextName();
-		
+		 
 		String sf = fConfig.getInitParameter("security_filter");
 		sucerityFilter = !"false".equals(sf); // 除非配置为不安全过滤,否则需要进行安全过滤
-		
 		String su = fConfig.getInitParameter("security_url");
 		if (null != su) {
 			String[] ss = su.trim().split(";");
@@ -52,8 +48,10 @@ public class SecurityFilter implements Filter {
 			}
 		}
 		
-		String fr = fConfig.getInitParameter("failure_redirect");		 
-		failureRedirect = (null == fr) ? contextPath + failureRedirect : contextPath + fr.trim();
+		String fr = fConfig.getInitParameter("failure_redirect");
+		if (null != fr) {
+			failureRedirect = fr.trim();
+		}
 	}
 
 	/**
@@ -72,10 +70,14 @@ public class SecurityFilter implements Filter {
 			chain.doFilter(request, response);
 			return;
 		}
-
-		
+				
 		HttpServletRequest req = (HttpServletRequest)request;
 		HttpServletResponse res = (HttpServletResponse)response;
+		  
+		if (null == contextPath) { // 更新上下文与失败跳转路径
+			contextPath = req.getContextPath();
+			failureRedirect = contextPath + failureRedirect;
+		}
  		
 		Boolean isLogin = (Boolean)req.getSession().getAttribute("isLogin");
 		
@@ -95,5 +97,5 @@ public class SecurityFilter implements Filter {
 				res.sendRedirect(url);
 			} 
 		}
-	}
+	} 
 }

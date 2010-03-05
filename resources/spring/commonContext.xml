@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
-       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd" 
-       default-lazy-init="false" default-autowire="byName">
-	
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd"
+	default-lazy-init="false" default-autowire="byName">
+
+	<bean id="module.base.database" class="org.h2.tools.Server" 
+		lazy-init="false" scope="singleton"		
+		factory-method="createTcpServer" init-method="start" destroy-method="stop">
+		<constructor-arg value="-tcp,-tcpAllowOthers,true,-tcpPort,8043" />
+	</bean>
+
+	<bean id="module.base.dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource"
+		destroy-method="close">
+		<property name="driver">
+			<value>org.h2.Driver</value>
+		</property>
+		<property name="driverUrl">
+			<value>jdbc:h2:tcp://localhost:8043/~/sample</value>
+		</property>
+		<property name="user">
+			<value>sa</value>
+		</property>
+		<property name="password">
+			<value>sa</value>
+		</property>
+		<property name="alias">
+			<value>h2pool</value>
+		</property>
+		<property name="prototypeCount">
+			<value>5</value>
+		</property>
+		<property name="maximumConnectionCount">
+			<value>100</value>
+		</property>
+		<property name="minimumConnectionCount">
+			<value>10</value>
+		</property>
+		<property name="trace">
+			<value>true</value>
+		</property>
+		<property name="verbose">
+			<value>true</value>
+		</property>
+	</bean><!--
+
 	<bean id="sucerity.manager" class="cn.tianya.fw.webconsole.secutiry.SecurityManager"></bean>
 	<bean id="module.config.app" class="cn.tianya.fw.webconsole.module.config.action.AppAction"></bean>
-	<bean id="module.config.bizEntity" class="cn.tianya.fw.webconsole.module.config.action.BizEntityAction"></bean>
-	<bean id="module.config.resource" class="cn.tianya.fw.webconsole.module.config.action.ResourceAction"></bean>
-	<bean id="module.system.security" class="cn.tianya.fw.webconsole.module.system.action.SecurityAction"></bean>
+	<bean id="module.config.bizEntity"
+		class="cn.tianya.fw.webconsole.module.config.action.BizEntityAction"></bean>
+	<bean id="module.config.resource"
+		class="cn.tianya.fw.webconsole.module.config.action.ResourceAction"></bean>
+	<bean id="module.system.security"
+		class="cn.tianya.fw.webconsole.module.system.action.SecurityAction"></bean>
 	<bean id="lab.testing.Test" class="cn.tianya.lab.testing.Test"></bean>
-</beans>
+--></beans>
